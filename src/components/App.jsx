@@ -1,20 +1,23 @@
 import React from "react";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
-import Notes from "../components/notes.jsx";
+import Note from "../components/Note.jsx";
+import Notes from "../notes";
 
-console.log(Notes)
-function createNotes(noteEntry){
-    return <Notes title = {noteEntry.title}
-        content = {noteEntry.content}
+
+function createEntry(noteinfo) {
+    return  <Note 
+    title={noteinfo.title}
+    content = {noteinfo.content}
     />
 }
 
-function App(props){
+
+function App(){
     return <div>
         <Header />
         <Footer / >
-        {Notes.map(createNotes)}
+        {Notes.map(createEntry)}
     </div> 
 }
 
