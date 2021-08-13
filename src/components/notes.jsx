@@ -26,4 +26,4 @@ const notes = [
   ];
   
 
-export default note;
+export default notes;
